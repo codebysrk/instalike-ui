@@ -26,4 +26,8 @@ card.addEventListener("dblclick", () => {
     heart.classList.remove("active");
     heart.classList.add("gone");
   }, 800);
+
+  setTimeout(() => {
+    heart.classList.remove("gone");
+  }, 1300);
 });
