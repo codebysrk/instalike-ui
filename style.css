@@ -25,12 +25,12 @@ body {
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   padding: 1rem;
-  cursor: pointer;
+  user-select: none;
 }
 
-img {
+.card-img {
   width: 100%;
-  height: 100%;
+  height: 80%;
   object-fit: cover;
   display: block;
   cursor: pointer;
@@ -70,4 +70,70 @@ img {
   transition: transform 0.5s ease, opacity 0.5s ease;
   transform: translate(-50%, -250%) scale(1.2) rotate(10deg);
   opacity: 0;
+}
+
+footer {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #dcdcdc;
+  cursor: pointer;
+}
+
+.profile-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #343434;
+  text-transform: capitalize;
+  text-shadow: 0 5.36px 8.896px #989898, 0 -2px 1px #fff;
+}
+
+.btn-follow {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  background: #0560b0;
+  color: #ffffff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.15s ease;
+  z-index: 1;
+}
+
+.btn-follow:hover {
+  transform: scale(1.02);
+}
+
+.btn-follow:active {
+  transform: scale(0.95);
+}
+
+.btn-follow.active {
+  background-color: #0b9f41;
+  color: #fff;
+}
+
+.ri-add-line,
+.ri-user-follow-line {
+  font-size: 1.2rem;
+  vertical-align: middle;
 }
